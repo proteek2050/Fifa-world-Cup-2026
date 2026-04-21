@@ -419,6 +419,16 @@ E:/worldcup2026_app/worldcup_2026_bd/
 
 ---
 
+### Session 5 — 2026-04-22 (Bug Fixes — Images & Overflow)
+
+- **Home screen images not loading:** Images were in root `assets/images/` but Flutter reads from `worldcup_2026_bd/assets/images/`. Copied all PNGs to the correct path. Added `menu_teams.png` and `menu_stadium.jpg`.
+- **App bar logo replaced with text:** Removed `logo.png` from AppBar. Now shows Bengali text "বিশ্বকাপ ফুটবল সময়সূচী ২০২৬" from `AppStrings.appBarTitle`. `logo.png` reserved for app icon.
+- **Home screen RenderFlex overflow (11px):** "আজকের ম্যাচ" card `SizedBox` height increased from 140→152px.
+- **History screen RenderFlex overflow (line 195):** `_WinCountCard` Column children resized — flag emoji 28→22, SizedBoxes 6+4→4+2, caption font 12→11px. Added `mainAxisSize: MainAxisSize.min`.
+- **GitHub upload:** Full project pushed to `https://github.com/proteek2050/Fifa-world-Cup-2026`
+
+---
+
 ### Session 4 — 2026-04-22 (Bug Fixes)
 
 **All bugs from `bug fixing.md` fixed:**

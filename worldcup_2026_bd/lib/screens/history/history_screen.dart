@@ -194,29 +194,32 @@ class _WinCountCard extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Text(flag, style: const TextStyle(fontSize: 28)),
-          const SizedBox(height: 6),
+          Text(flag, style: const TextStyle(fontSize: 22)),
+          const SizedBox(height: 4),
           Text(
             name,
             style: AppTextStyles.caption.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.w600,
+              fontSize: 11,
             ),
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 2),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('🏆 ', style: const TextStyle(fontSize: 11)),
+              Text('🏆 ', style: const TextStyle(fontSize: 10)),
               Text(
                 '${BengaliNumber.fromInt(wins)} ${AppStrings.times}',
                 style: AppTextStyles.caption.copyWith(
                   color: AppColors.gold,
                   fontWeight: FontWeight.bold,
+                  fontSize: 11,
                 ),
               ),
             ],

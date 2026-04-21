@@ -112,15 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () => Scaffold.of(ctx).openDrawer(),
           ),
         ),
-        title: SizedBox(
-          height: 36,
-          child: Image.asset(
-            'assets/images/logo.png',
-            fit: BoxFit.contain,
-            errorBuilder: (ctx, err, st) =>
-                Text(AppStrings.appBarTitle, style: AppTextStyles.appBarTitle),
-          ),
-        ),
+        title: Text(AppStrings.appBarTitle, style: AppTextStyles.appBarTitle),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -166,10 +158,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 _GridCard(
                   assetPath: 'assets/images/menu_teams.png',
                   label: AppStrings.teams,
+                  iconFallback: Icons.groups_rounded,
                   onTap: () => _navigate(context, const TeamsScreen()),
                 ),
                 _GridCard(
-                  assetPath: '',
+                  assetPath: 'assets/images/menu_stadium.jpg',
                   label: AppStrings.stadiums,
                   iconFallback: Icons.stadium_rounded,
                   onTap: () => _navigate(context, const StadiumsScreen()),
@@ -453,7 +446,7 @@ class _TodaysMatchSection extends StatelessWidget {
           )
         else
           SizedBox(
-            height: 140,
+            height: 152,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: matches.length,
