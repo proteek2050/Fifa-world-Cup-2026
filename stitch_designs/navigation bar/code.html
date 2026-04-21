@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>বিশ্বকাপ ২০২৬ - নেভিগেশন ড্রয়ার</title>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Custom Font for better Bengali rendering -->
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#880E4F', // Maroon/Reddish Purple
+              dark: '#560027',
+              light: '#BC477B',
+            }
+          },
+          fontFamily: {
+            bengali: ['Hind Siliguri', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #1a1a1a;
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    /* Simple backdrop to mimic the app feel */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 10;
+    }
+    /* Scrollbar styling for the drawer */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center min-h-screen">
+<!-- BEGIN: Mobile Device Container -->
+<div class="relative w-[375px] h-[812px] bg-white overflow-hidden shadow-2xl rounded-[3rem] border-[8px] border-gray-800">
+<!-- Background Content Mock (Blurred) -->
+<div class="absolute inset-0 z-0 p-6 flex flex-col gap-4 opacity-50 grayscale">
+<div class="h-40 w-full bg-brand rounded-xl"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-32 bg-gray-300 rounded-lg"></div>
+<div class="h-32 bg-gray-300 rounded-lg"></div>
+</div>
+<div class="h-64 bg-gray-200 rounded-xl"></div>
+</div>
+<!-- BEGIN: Navigation Drawer Overlay -->
+<div class="drawer-overlay"></div>
+<!-- END: Navigation Drawer Overlay -->
+<!-- BEGIN: Navigation Drawer -->
+<aside class="absolute top-0 left-0 h-full w-[80%] bg-brand text-white z-20 flex flex-col shadow-2xl transform transition-transform duration-300" id="main-navigation">
+<!-- BEGIN: Minimal Header -->
+<header class="pt-12 pb-8 px-6 border-b border-brand-light/30">
+<div class="flex items-center justify-between">
+<h1 class="text-2xl font-bold tracking-tight">
+            বিশ্বকাপ ২০২৬
+          </h1>
+<button aria-label="বন্ধ করুন" class="p-1 hover:bg-brand-light/20 rounded-full transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<p class="text-brand-light text-sm mt-1">অফিসিয়াল অ্যাপ</p>
+</header>
+<!-- END: Minimal Header -->
+<!-- BEGIN: Navigation Links -->
+<nav class="flex-1 overflow-y-auto custom-scrollbar py-4" data-purpose="main-nav-links">
+<ul class="space-y-1">
+<!-- Main Section -->
+<li>
+<a class="flex items-center px-6 py-4 hover:bg-brand-light/10 transition-colors group" href="#">
+<svg class="w-6 h-6 mr-4 opacity-80 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+<span class="text-lg">সময়সূচী</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-4 hover:bg-brand-light/10 transition-colors group" href="#">
+<svg class="w-6 h-6 mr-4 opacity-80 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
+<span class="text-lg">গ্রুপসমূহ</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-4 hover:bg-brand-light/10 transition-colors group" href="#">
+<svg class="w-6 h-6 mr-4 opacity-80 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" fill-rule="evenodd"></path></svg>
+<span class="text-lg">দলসমূহ</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-4 hover:bg-brand-light/10 transition-colors group" href="#">
+<svg class="w-6 h-6 mr-4 opacity-80 group-hover:opacity-100" fill="currentColor" viewbox="0 0 24 24"><path d="M11 2a2 2 0 00-2 2v2H7V4a2 2 0 00-2-2 2 2 0 00-2 2v16a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2 2 2 0 00-2 2v2h-2V4a2 2 0 00-2-2zM7 8h10v12H7V8z"></path></svg>
+<span class="text-lg">স্টেডিয়াম</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-4 hover:bg-brand-light/10 transition-colors group" href="#">
+<svg class="w-6 h-6 mr-4 opacity-80 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+<span class="text-lg">হাইলাইটস</span>
+</a>
+</li>
+<!-- Divider -->
+<li class="px-6 py-2">
+<div class="border-t border-brand-light/20 w-full"></div>
+</li>
+<!-- Feedback Section -->
+<li>
+<a class="flex items-center px-6 py-3 hover:bg-brand-light/10 transition-colors group text-sm" href="#">
+<svg class="w-5 h-5 mr-4 opacity-70 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<span>৫ স্টার রেট দিন</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-3 hover:bg-brand-light/10 transition-colors group text-sm" href="#">
+<svg class="w-5 h-5 mr-4 opacity-70 group-hover:opacity-100" fill="currentColor" viewbox="0 0 20 20"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
+<span>অ্যাপটি শেয়ার করুন</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- END: Navigation Links -->
+<!-- BEGIN: Bottom Aligned Footer Section -->
+<footer class="p-6 bg-brand-dark/40 border-t border-brand-light/20">
+<div class="flex flex-col gap-4">
+<!-- Bug Report / Feedback Group -->
+<div class="flex flex-col gap-1">
+<a class="flex items-center text-xs text-brand-light hover:text-white transition-colors py-1" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              বাগ রিপোর্ট করুন
+            </a>
+<a class="flex items-center text-xs text-brand-light hover:text-white transition-colors py-1" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              মতামত ও পরামর্শ
+            </a>
+</div>
+<!-- Settings & Log Out -->
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-brand-light/10">
+<button class="flex items-center text-sm font-semibold text-white/90 hover:text-white" data-purpose="settings-button">
+<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              সেটিংস
+            </button>
+<button class="text-sm text-brand-light font-medium hover:text-white" data-purpose="logout-button">
+              লগ আউট
+            </button>
+</div>
+</div>
+</footer>
+<!-- END: Bottom Aligned Footer Section -->
+</aside>
+<!-- END: Navigation Drawer -->
+<!-- Status Bar Mock (iOS style) -->
+<div class="absolute top-0 left-0 w-full h-11 px-8 flex justify-between items-center z-30 pointer-events-none">
+<div class="text-xs font-bold text-white">9:41</div>
+<div class="flex gap-1.5 items-center">
+<div class="w-4 h-4 rounded-full border border-white/40"></div>
+<div class="w-4 h-4 rounded-full border border-white/40"></div>
+<div class="w-6 h-3 rounded-sm border border-white/40"></div>
+</div>
+</div>
+<!-- Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full z-30"></div>
+</div>
+<!-- END: Mobile Device Container -->
+</body></html>

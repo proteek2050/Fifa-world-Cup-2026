@@ -1,0 +1,15 @@
+# Excel temp files
+~$*.xlsx
+
+# Claude memory (local dev only)
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Flutter build outputs (already covered by worldcup_2026_bd/.gitignore)
+worldcup_2026_bd/build/
+worldcup_2026_bd/.dart_tool/
+worldcup_2026_bd/.flutter-plugins
+worldcup_2026_bd/.flutter-plugins-dependencies

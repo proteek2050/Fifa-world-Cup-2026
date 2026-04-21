@@ -1,0 +1,58 @@
+name: worldcup_2026_bd
+description: "FIFA World Cup 2026 Schedule App for Bangladesh - ফিফা ওয়ার্ল্ড কাপ ২০২৬ সময়সূচী"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # UI & Fonts
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.4.1
+  carousel_slider: ^5.0.0
+  shimmer: ^3.0.0
+
+  # State & Storage
+  provider: ^6.1.2
+  shared_preferences: ^2.3.3
+
+  # Network
+  http: ^1.2.2
+  connectivity_plus: ^6.1.0
+
+  # AdMob
+  google_mobile_ads: ^5.3.0
+
+  # Notifications (Local only, no Firebase)
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+
+  # Utility
+  url_launcher: ^6.3.1
+  share_plus: ^10.1.3
+  intl: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/

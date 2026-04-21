@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="bn"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Hind+Siliguri:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#544600",
+                    "secondary-fixed-dim": "#ddb7ff",
+                    "surface-container-lowest": "#140c0e",
+                    "surface-container-highest": "#3d3234",
+                    "on-secondary-container": "#d1a1ff",
+                    "error-container": "#93000a",
+                    "secondary-container": "#622599",
+                    "on-surface-variant": "#e0bfbf",
+                    "outline-variant": "#584141",
+                    "on-surface": "#f0dee1",
+                    "on-primary-container": "#ff828b",
+                    "primary": "#ffb3b5",
+                    "tertiary-fixed": "#ffe16d",
+                    "surface-tint": "#ffb3b5",
+                    "on-secondary": "#4a0080",
+                    "outline": "#a78a8a",
+                    "on-tertiary-fixed": "#221b00",
+                    "inverse-primary": "#b02a3e",
+                    "on-tertiary": "#3a3000",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#c9a900",
+                    "on-primary-fixed-variant": "#8f0c28",
+                    "surface": "#1a1113",
+                    "on-primary": "#680019",
+                    "on-tertiary-container": "#4c3e00",
+                    "surface-container": "#271d1f",
+                    "surface-variant": "#3d3234",
+                    "surface-dim": "#1a1113",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#f0dee1",
+                    "primary-fixed-dim": "#ffb3b5",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "background": "#1a1113",
+                    "on-background": "#f0dee1",
+                    "primary-fixed": "#ffdada",
+                    "on-primary-fixed": "#40000c",
+                    "primary-container": "#800021",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#2c0050",
+                    "secondary": "#ddb7ff",
+                    "tertiary": "#e9c400",
+                    "surface-bright": "#413639",
+                    "on-secondary-fixed-variant": "#622599",
+                    "secondary-fixed": "#f0dbff",
+                    "surface-container-low": "#22191b",
+                    "inverse-on-surface": "#382e30",
+                    "surface-container-high": "#31272a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Lexend"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"],
+                    "bengali": ["Hind Siliguri", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #1a1113;
+            color: #f0dee1;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bengali-typography {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 0.5px solid rgba(255, 179, 181, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#1a1113] shadow-none">
+<div class="bg-gradient-to-b from-[#800021] to-transparent">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#ffb3b5]">arrow_back</span>
+</button>
+<h1 class="text-2xl font-bold text-[#f0dee1] bengali-typography tracking-tight">দলসমূহ</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#ffb3b5]">search</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOstL7I6wSRma2aorgFcxECBjPawSVO4YGqryn2XC3imtGDwtbQ2HWEujWX9QOu5cod4j8XxYGxSbeq1NVgkdz9T8ypUTggbbnU5sbjRQe2sUn45r4U3PyRd-c2ds6_kVWIJlJsU9gK4KSAv2B_gQIgAYaURQR4fL57AtrVYIViLSDmx0sqwIqCG--l2qayn6b3-PMPZjVENBgdS1NinUOJxLYJLYZzBnjihrN4Xra9ZfoRlFBGSMmXUQGtSIa6j0O-WBtvkOOW20"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-32 px-4 max-w-4xl mx-auto w-full">
+<!-- Team Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Argentina -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Argentina" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGLIVGKBkS5dxj7mGcBywW8Ks7c15dycV6rXIcb12Ef8FViWPbRLZCUVXa6Y0WivcxYpNi3GaF7rzdmSzoKfo9TvcCFJ8epWiVLAbQdBQgedHdAYfuJP1Jg-YHlXCfVuQzwGnfu1jZ1MOQC-NW_HUnrhCXS2B9fQOdrJgwJPaDuDsOENk29lgy50Pp2le-Ee_MujGGGiimQxWMFO-4CY2eWUqTw6gilBYWsCEcG36Zsi64gZMgPmQbUAOMaV2fYtVvevsEre5-i1k"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">আর্জেন্টিনা</span>
+</div>
+<!-- Brazil -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Brazil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNa3cRUPmPSaNil0SltSTNBO_5or78xUDNyydru1Jivt5brewDuXyfmbrJCf5pjrJYCRuCLu4M2reBTuuOMZn9ykLhJmm8DCtPW6rs3g9IgIbIPk8CliegLJEXet3dMmLarXrnZ_UAo-ZK0Wy5kxfmD-Lqoyv0sffsWLcGUfHpnROUGb4P1AHgh1z2l5gB_5LH4UOFvBEy628eEq9SsFXXVMF5cTFzvUypHPq8Qt17EwPSlgAz0QnO9zQAqStTFgqBTAM0J7SKCN8"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ব্রাজিল</span>
+</div>
+<!-- France -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="France" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF4LVBb7vtDZSzw_P4Ayco5WGcGCv0pCBU3GfnJ-_A-DbsizcwrrCDnmq0XUZ9X82hGoqNKjyeN5yei29gnfzE0CLqJu2oo1UO5xI-hMucxi45VObiCewaZQXfasWJLHux1U0O6gHdXowBMIBTeAcl7EGkWt1jzf0SmtbkVyOUySPSTmKJCYa9quxOWcQW98wHgHiq7mJZCT2MTueBBvW2HHkF64Y1LZ2GCXVLUshcSw7GJs8xfsGU5_pVxZi_C80UTKf1A8nKaLw"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ফ্রান্স</span>
+</div>
+<!-- Germany -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Germany" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWsOdcDjZJkL1_iDlpx4HXM0x6XZgcrVM4o_XXMU94HgGEW-_5eGb1AyItiQ8pG2TEc6qMmtV9iFqF78_nlyJZdcJqk7R3ZpsUCVJcWtOfK2c-sCBUXEBIkQM0kR-DX0e8gv2i4hAVNjKKgrLcoqGK6fIuIXUwSYmM0LMsHC4KCtukq7bSCSQ3ywyeaG2hfEPRXLspJ9UhVvIv-miY6jV2j3pqqUEnaG9bFc7ysKKvnHbCZadn63Ad44zL_fzoYX_7oFhJmg55W0Y"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">জার্মানি</span>
+</div>
+<!-- Spain -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Spain" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAsvIA8aqFpLmtzRJEsKl1FEhAidm8_Hkl2bIFjl7JAkjDdvYIIZLwABkr2DZh_iE3EcElBX-yRIic_orUKswGOSGCXVYW6iQs85jwPG5Wl5ns_RZUN2slmp2SiC0WP2mnPrPIhEjDl9ax65QOvodJOT66Ah-sthjJgD9RDnXNNYevg0iJYNTXJMzGqDI3a1v3DlWo_Y9mhl4MWw6Hl2hGMwS9lD4zhXAlfFch8Kb4qRyoTjc92oj3YofA3bXl8fykPqsq29lcopw"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">স্পেন</span>
+</div>
+<!-- Portugal -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Portugal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuL43q6CAUBIprsgGx5NsAyHCErVa2udCHkfC21cWMXXGmQ3TfWb32aOy63Z7-EpYIJWFeikDraYQZJtNaUdssuE5PZuSjzt1bK9lSPy0iPTuOMd9EhD6Kn5Q7XhchKAASfdBZB55vpRri6vGCbWmoKZemDFrNWqCeMQYElJ29Q590cOVBkgzkzr0azIJhn52Jhn6GBxGk3_x5kQQXzfqqCLA91dkzWWVQAPgiWks-wZw_diCcYgx4ztSu1Lp5n8icuWYy-SI9T5w"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">পর্তুগাল</span>
+</div>
+<!-- England -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="England" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnV9aheaqxHnIyjyGE0EA8f9t3MG5WeV-7Z2GmoQWBsouJm_r8rV9td0tr77PLDbgsaV4tm9THuFOb-FLJE89dC8skXiN8sPwwKHAcRKVz0zNj7BC0cxrJ56_NM0g0G3QmUjRixphwR5-YKjYLuSjRFaCRCkg8Y-GJOimuM2SIiLrCzjnX6HzdDc0FfwMg3e1KHQjDCcPDckdERbMtwPQ_01T51CnLTDGlhASNWQHa1EVqapV9AIta_on69YJ4AR-tZvYDdIFVyHA"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ইংল্যান্ড</span>
+</div>
+<!-- Netherlands -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Netherlands" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3VjCbVl3CyGjIMAjHMwiKQ6y2_OHuu9qjOgXro0FzMHGH59m8aNBHVTZ2iR4TPnEkfX_d4aJMDAs1MUdT7-npA0Z4pDTUApQ6aGIxdJa59BscWoGTj0yP5x86IfWyuNFOe-ZcjM53f_9E0yXBPs0YekvcngupUU0aUiSob-fbpq2IIwlPGX4TOIQl2rJ2MUcfDQFJknNWVojr8IfIZ4L3a80MLZbgZHHjxjLGLZ5F8xjJB5asg7FiOA9Rbx5vujTEmYFoqCBov6Y"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">নেদারল্যান্ডস</span>
+</div>
+<!-- Belgium -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Belgium" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvDeE7zo-JxDQVDDwQ5r4q93IUtLbqgTGWY0kDuJcpk_8qjbApLdMv75JOSQAzEF-TO6Lc76ot0gc_vj9ETDtSp5_vR2X0Nvn4ps7MEyteWmHZg229c8DSMPkgbHbEgied8hSMmpJzzivK_Ar9bqSKdBJkRakXhcYvf-Xs8ND6BaqJl4GfSaanLYLFJh_eUZ81ZzvQdV8X52sYWQkXHBOddakqSQHpBiQFHwmsI7JttoUa5D93Fyi0oVXJzQQJmjyRmvIyhFIKitc"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">বেলজিয়াম</span>
+</div>
+<!-- Croatia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Croatia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7JjBdgRyrKJCHWn9yAeHR93TUWSmTy2hnbEVofOlTKly3FyA5iWpSRf4v6tHkBr_L5M4pWJjnSFwp1uSCxw1aHYIXpNdgvH2L-zOlDgnqDSDwCh1Yl2q4iFGtyD6tnf-s6ELYXoIFuXXR8aEpba4J-ytXquAhmUH6AsJKpKgUIb7DxAOG0yseldVSYBypkapAqdG7_H8DFYa7-4uknZ5n6T4E8-gI4d_2I218v8Vsm39d28US8NzZfUWFlCbtjcmwtCe_nnuuKNw"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ক্রোয়েশিয়া</span>
+</div>
+<!-- Uruguay -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Uruguay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-uo9QEC86Ky3gXswr7AMgGYWtHVMkawbQOyWrB30KwJKUCtPBvwSmiikDK7c8e8T2Nfc0dQCJcXv-AJS5ttKXZ1GkdHoQB02EkveVVebmQqjksgrY4sLMw5hDoUj1vD_CK-MtHXJfL-pwMOX25gCEqWBxVYoqN_UetA58h0NLG8yzX4eref1QY3SMrfkVChaK4jjUGp4s1DKJuPLCyKs5a-19AdzGhUXtQYurxUfhmQBbxHwD1Wo-8wCASI2tYgbEz3V7-zQdPI8"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">উরুগুয়ে</span>
+</div>
+<!-- Colombia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Colombia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsqx6Cd-9iyezQxPfM4zAYseDeyd1Na2PN0X20UDRcYhchUiilti98-JlyElkrMmUXIQ3CkFUBTCIj8qeyJSQ1KvCjF6ki1twDoKuEK1oTclRSWOLt1XRrfwbN26o-YmhnJq61xPAMU60B8-0z-zWVdU4ZhuhG8T_oq5ol-HAGSs_yjSQXQm_ecqgcvYLa_cRca-dQCWQKFKhm89r6M7HviOwtUMGjFv2xWuaM5d6NTumnIPQj926TmEn0MG4PBky-Q3kXJOj4yBI"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">কলম্বিয়া</span>
+</div>
+<!-- Mexico -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Mexico" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbDQiw3lYbpzaa11A854bjiI4mpCs-r_nw7jWt0ARZj3F2KMEmSfbZOgaWlG0LwUvard5EaW6OKLxarob5kQAjPQDIAF3dRjkAXFJdIgoYUPjSR2p7-agEfj4HW1Stc1A6LkMS5e0wXXb_liexwOOGwFtqgfzP5xBhPWpU1QjdPVRf56u0j1f9-KeX4fQp6kidZWz2L415svfGmwSB4yZHtF-RImWhiZg3fC8ShBdibyXFpj3MUi-ONlgc6EJIlIHISjA8JJhqYVU"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">মেক্সিকো</span>
+</div>
+<!-- USA -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="USA" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU1tIKX_7-nKNeyuXq-BamKcemlbOJuEx_Vm-Q-nzU1rWflFrIMZGa7gitmsynbx6HC67e7O1KvxBTtF2cEMaXmEIIQ0ODKKIJqEVH9xCdSy-E3h1bZvnEhYdiZvzJpFoFnnFjvwgwiFzh6Aq0i22-AMgOXPS3cezmYAA6wfOhSk1IJhN7pMCMF-L4H8LKV0H5CUUkS-J1zqA5Q3UliDC5AwCAyMVQkvjgTWGFUvOUseeqSEKaS0Dh_jSySU3D1w4rmH4oS5OshSU"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">যুক্তরাষ্ট্র</span>
+</div>
+<!-- Canada -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Canada" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGLe8Y9G6g8Up7qWAzWbeF1CURIeyHw59FiDyosNYolKTem-MQXh1MIXJrPv695RZ_wdizEsuk1WjBES056kF-8qXKfHnXJIrAcwhi7D_HMecPYgm8BS5gB7gUy62qxcAejIfIxYID38tu8UluUoiuBaq2Hds9_LrGjth3L-XAd8dV9qHqOa2PvkHwDcx05chzG5RcPW3UxQX4Knfmf6dxbvGVhGzRE2hfPUOswd2C5enW1rlY_dObbpzJwexJ1P_LnVH3BLAaQCU"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">কানাডা</span>
+</div>
+<!-- Japan -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Japan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYKJFVNWb8o4ES-w8cXKfDpCmDI5kR8RwjQ6XOCpJckyFHrbR_l0TkBXWxFbJ3yu3dVg6n8yl82lH6CH-6G4b4dMcQPqDzFJ6WcOx2kZYh_IcKiffzuhutv_C7_1iqfVPogmnBg6yYrjZWGSeZvARLMy0dr2kOYZF3A9Uq07l8GklEN7VkOOwoCQlnTA2Zf6lR7OEMMQGL27xoVmNIEKWMMdl0fnGgWZhgIJDW_oconXZIazdJLRPRMdEtDT0-LABiQyTfHX3b54M"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">জাপান</span>
+</div>
+<!-- South Korea -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="South Korea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt3qB9lxaQLKBQRjRdR9zZV6U0X_CBG87MIK71nCPvNwZntM3hZU2YvWVIZf5KB0KBKCMCSHzJalSI31U-e0yZgJtyV8rbOgWURclHlaRm7tan6Sr3FDrK9SEyQ-QB2-9Lynp44rv5LiCoHK2G50iVY-fjxJ4tag0tEbIBJj779cxHk6IudKgZ0US539olhMcGqD7aeqJaCd8nZ995NkiHsjILf-EneAHX549Xiq9nurTGlj6O_jNnUKfI-4MUzrdeCmKbis5S3XI"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">দক্ষিণ কোরিয়া</span>
+</div>
+<!-- Australia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Australia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbWOvWpyDL3lVB431oH5UuYsOZUA1kXNHaK4UcPFn1IN3cv768UGnQFEFcW06aBr0ERdptpSc0DWerYTDX5Euhtf2L0daghG5ElH-KK5k24v8dkSv4OpDVDa5yknTw42VnX2CWCDdOUc-zy2vPNsZbAjSzMg5flj1MEPK8PgZTfzo3jM0uHRbW2WRsuiq3uulhImRWTKnKkNeteoNieSNIyP1cpeX_gCFu1d1GPWEQXXX4ldMS1q7ACWhzALM6DFdhdx3OUZ9x39w"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">অস্ট্রেলিয়া</span>
+</div>
+<!-- Saudi Arabia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Saudi Arabia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJnOyr12RI9mp_HWWxjGPXxDDJTn977AHjTvSn8XP75lIVPa6a0fh5KkC1voil13mfkvXdm-HmZAt9SlDXoQVD5xKqcEYKntaLAp3KLPHxcMqquJaFa4Drs6EpiaorWKXCiRZFZYEKLNcgxXZVkuqt4JHSUn8R3ugTOSQN9CxrpfO-RB061MfOYz1zsKA4PSypiBuzZQwPIo8goRZL1QoNZPbWftA8PzWFgoBYIQwMrMaXQcL4ko8QbHSObZI8N2b3UnRXm0K38c"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">সৌদি আরব</span>
+</div>
+<!-- Iran -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Iran" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-BeKu3Kp1MtXagGBYTz5uGaFa5Dmp6mRTshFYbfYIcCOXlxEnPHOc5OGT3LSJo5nVeGcUXWX_1SSIQHpuOQplvpmhWyH-wief28IS8QBGb2aYgerbWpl4lQ78TMNk6JfAYDlk6CDz1emKNXZG2TMkfgalFpOQ_7cGTWAbya5qIlvvJ1N7Mn2aVZhVPBlxvkuDdf2Eb8MsHzLbzFum2LyK37R7ACE-wLOBjBqUNi08UBX67544obZLAsHbyFb2WhESp0Q_Xe0O_D8"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ইরান</span>
+</div>
+<!-- Morocco -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Morocco" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8eVO--PNASgrRpCjlw_c9w39k8YvRLXZnPM_Zqremfqvt41D9o5mTP-gx2Ak5-x7vgHe6DCGuv_nAghBreWsRFVNDEYpq02q9BpxVTANHqDo1SOwEObO_iYnFMm_W-KQDJ0jevsiWdCNgOIgq8bEFPyMNwrcKwlcMzVnkLZt7eRb6n1Q_C3u0UctXlRKO22ZiZt7M4YSl_ABmaTfXl10i35OZUSB6KJNPIUGcChYsyUoOAZ7UzrfV9mTLB6lu2TYnOi-AQtGpfQQ"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">মরক্কো</span>
+</div>
+<!-- Senegal -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Senegal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJb5D86cym74o_IVCdOIk9BDHseZ7Xioya1jaH4jfG8NkmpegS1Rj3nVzKaicIlBzZGYvDwuOz3yZa9WI4FZMe0xS6KJKoEcEnWXY_7Swf9WPrzKgm7ZmTkjjmyQGvaY6EcGv7y52dzmAp8PAQ_9WhJUp-Y12dNet7v83YAjlg0_UvYDj4-zlKZOyCScsW89A_9tRbHe0dNSuBDX_TSQSuPXrc7tPXTC_-MMgKWzatS5I8b944FXK1qMCCfnUVUWr_IdVTm1ZinxU"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">সেনেগাল</span>
+</div>
+<!-- Ghana -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Ghana" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtqtM0raPczSyR7XBxKXWg0W4InytDD3q8hx8METXZFG7o628uvgOxpQi3xq3YSxUjmfjPOJJOToHa39PnsFcfRAQeIITtGmkzr9YF0C0uCqbYo3oXQM4dHcj2B3iD_gYKc85axvaVftmb_tN4QDMdlOLi2wXZFSU7JMyZQJv8IbX6Rc5iXzBjUpcAfhEB6mVFK_YC6B2wRnMU9R_GqrO--3oKOp7pCcJodc7NEC7NPobPzla9tBKwDfS0vc5-LqOmLP9UOFfvaz8"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ঘানা</span>
+</div>
+<!-- Egypt -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Egypt" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyCPFprS5CDefMC0XRrtqFUuw75Y0SEYBnu2sBwIbQzmxFymhQSnwVq8jGuqLwCas0SZKdqEIcV4oPA7HSfNDMmWhJoYyVwL2MIu5GqN1MIGSZ272YtX_7ePpdPXvJHioe8ovg0WSPd83ld8eVDYmwF48iDXpoWAc3nc9qrdQhs1IEwmydVIJrJhZ5gYYO75ls-TfqBZGRBBYjD-sGYXQaM6fRArilNA94Tc9MaFH9uSEFw5i-3wEvkEl8NLz-eBAE9HFj0h8_AOU"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">মিশর</span>
+</div>
+<!-- Tunisia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Tunisia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfWWoapt5hbYbD-EbcbyfulmJy1SIzKKCrj1TS4JTR9-Es6mqnrK8IQwTRigPbRvhgfzcmEwfNCN5NJpjei49Y7tFxG5C0yXbfH25xcR2IP9nmcd7exvIXZDMGDWgXu8Mht4dAy8m4MOagcEtT89PCEyckPJzh75UlC4eqLxaHy4H_G8T71DNCWs8omvZI28qyhPefMmSg8GLHNNAL5WN0Ug3cZQGJ68Ve8RKLj4Jds5pXittS8pRbAxSu_h0VbR4uTgUOKPAXQnM"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">তিউনিসিয়া</span>
+</div>
+<!-- Nigeria -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Nigeria" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0MWqMB_t7-ij4Qa3kWRXeBWckZSJ1fIdI79cs0L1MK2OzM9CwcHTXFQPqqoj__Zu3k7siGuZ1BcmOb6_txoAgQ-q5n-_aYgLX1Xad_ZpsKiZpRV9rS8cXp6gg-igYJyV0_m2HMstLqUBAown1-KdRAWI2wdvT9kLZpNbHlJLB5IdxNx5T-ox4XLaTRBtqDgg6549hSenpGyNe7Qj9x4yt5I_peY4VGc_hrV74jDdF48GD26d7Fi2mLcMCWzFjCRYgGB4om0BHdVE"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">নাইজেরিয়া</span>
+</div>
+<!-- Cameroon -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Cameroon" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfjvOLflXDrB9rYmTKzYtlGvPLe4XTIrTZ2hRNaiAnIgvzEuU1uhCyK2ko36eALfpTaleqK81rlnPON6qSB3o38piuoGw7zgaIlbAwD4wWjl-zHoCos19zmLZ5SFN2Fw1i-xD9Y3xH6EbaHuKkxkH7Hr1xKVIc5UmGdcd-2cgi2XnxmHlNGNIm_6mW78qEbxsOSJ-_grMe8mgfFpaYKTW-7w1KiKol65Cdyd-zzVuW7FhTNZYOgBG9pKhTPjN4TTf3sHtA7QiXLeA"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ক্যামেরুন</span>
+</div>
+<!-- Switzerland -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Switzerland" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACAzlQaWv0vQHECOjEFNamVqeivu1NZLjp7dQ6xNGZsK09ra-mX-767JdYEZTLM-tOlxgyMfX4DJa0BYaTWn855-qtohTPry2gC1O65lWo4W3z-mHVg88txVgUr-ZUo87K_PR_25tXkcwJZEK2Vabnr1BjQbqjU7X22dCLFr1jNR9dcZF2xT4GAaYYisY54z_0SAhlvV1xPUE5-jUzYwsvD7KoBy1MOIg8hr4GJr5ALgbrXawqNqAZxqRqomr9WPb5BYxuyf-USTI"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">সুইজারল্যান্ড</span>
+</div>
+<!-- Poland -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Poland" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuUD9t-IsCY_ZaNU1_IU8eA1O1VTrZYqvmG6qBQ-neQG4epy2deXr48KRW1euCCVXIp5o549wnpNBGkShNdGn9xPDqLykaMxC949n-Ehhmu5zkapCgB36_ZZVtzGTIPcGvETkxgct9EwMRdYbAhalrWIqbMRjFqNInxGLqsB-FXllYdtq_GMZZQzrnYZEDy2AXxu-0Ck6JSFgrS0tLjRBpIL1H2BTnKKp-C_zdsyEMLVjZdJB4SgbG70_GM9GsTrC1x4WwVN5sHcQ"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">পোল্যান্ড</span>
+</div>
+<!-- Serbia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Serbia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx7rMXd33KwNuMXXEY9QKQ4od2OQTHbZoklOEKC15Iq0k-7eti1YsU3lAesL57SBrIyAT6_QzpZgwtMR_AZwLFjIRdRrBoaM99rsbgvFf6tKYzvogMzC8Wr9-ctbCZsvLrJq7HsaIvHK4otPauu1GkLHsJobz_Zd8ARW39F3pMxA1EDSuqgW9garSwJutCnhDUhXqnbfjVdrDEw6C8hi0a-LwK7gH_QMrR_iUovqa5jzyPZHZqFWOoJyhitxD-mxAsjGygJdWejB8"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">সার্বিয়া</span>
+</div>
+<!-- Denmark -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Denmark" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgXOR2SUMzf3cerQ1OgnkOGmGzAd5F_fjUmU53nyJMz5WmEddMitmhrrD3OhfjvG21o4rRs6Jkr2OaxStzsXbUNMK-aO4pIkQoKY--SgEDiCOm0hdcH5oNJaIQT-ostIhvoonSMA5mb9Vduprr0l7Gh-DisHkkq2keWzDfYPqbjNOUPCvSud6-W3JUWyLOfypyd5iBgtuQD--vAhD-5j_6KjzpJ6hCwyBiIxu9_gam7a_5Vyy4kVGPlUGBgKk-Yb7iOuIRtwsHbSA"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ডেনমার্ক</span>
+</div>
+<!-- Scotland -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Scotland" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHUaovJz8UrFexQ2o_VjWh0OOwsJ-lDzbIGEL3G0xL8wWwRMiQ51HMkZDpob66rmFw5M4tOzwuQlFMBcMMO50tpj2yg2r90e6EET5BnVuY3qtOF94d5mLAHrxFqXlHqEkGjWE6YivOrQqx9dqjh70mVVGISLETTgvrnlJY-IzzwQUTTxQmt34VQsSXYVQI7iw7XBnzaoZVyPYuKwioLG3p77T8_m2M5s1XuN2aBVeO_crNfQqOKn_62-cjytttd98HQHwBl3HNcoM"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">স্কটল্যান্ড</span>
+</div>
+<!-- Norway -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Norway" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSB2ejc48T1_TD1aDqopsqetSVPLcwcG4OxyLBGptHUCJELQnK-BY2xhPp1RmXbMJUKQ4-dt0xdjKvaYJFq_cugOrNwA87Dl02KpkOXw7QksbgUdI9iu3EmUQAk2pmS4savXyH6bZ4k_XlEy4oc2C05AS83-hSfF_P4MwR3zLOGXbTW2BnfnrnL3yEcvE_xf6tXckYHk4t3XyvkuiKidFPAk6RaTGqKuZ6c_sZaMH-XK1kBx6IN6tUgoCNdP7SSKLftmatqaobE2I"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">নরওয়ে</span>
+</div>
+<!-- Austria -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Austria" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxl3AOAg0M2BQ8FHutiZMw_wljXCf38poztQOzMFG1WktnIWIPQkfW6rDHavmMl9u0X0bLwaAQwK0rY3iAx6hrM5rdJ3B0fZhhnSiLDRm9Kelv1G5QpLt6Nuotid9j08ddppWDqzcD_h22ivTuJohpy457jyxtetgBHRSMH_wDd1y8hP9GgwggGGyr9XUsxKG1gill1AUNCvkzGDB_NrTeRMbP87odfpbCAX_4A5NOPdi21S-J7aEPALgyT1ayzFdaCFdmee3i1-U"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">অস্ট্রিয়া</span>
+</div>
+<!-- Czechia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Czechia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJKox6ebfWqXOi40CzTe4oRpUVrYvO6yNtwuIpdCyvw0heEh7Vv0TCPpwk4LBnJP-3nl28k0FAPoUDldUxoir30P-A9LQKLlhKM4CcobKE7RqtXvjyjx563tpRURPYksc7A_JjBVbheC8eNO54iacERktFjY7mhseb41BeRW5FZacYRgpTEzUWtA_mUBYty3akDFcWzlSLZv3c8AV-oeZ5hJm0QbJV5SQGLPqMq8uPMvZp_W752SyhFeBlnMqMMpCTezw6bxfKsbY"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">চেকিয়া</span>
+</div>
+<!-- Qatar -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Qatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZivbJxuR55ZFQghuSwvxI-QxgDMHPSo1pb9lvG6iUsFI3pqHCSQ9qMsqQ1oiO3alUf0xJ20QxM_tlN5ouYPW1cFKm5cwmDfrJeHKeUGgAxd_KYNqz0DyQpHbmJ0bxNplAQHgazgQ4rt-VUwXP67NlG2jxv_tNnIKxcjXboeM6QryCFEEtSF39uQzIfQUKck7xBBpG1OGAWgtPKuFEDWBPn5Znd6xEHbZdgpdRTf8e5PpjsB48XjFQvG0rCGQg4SxDU4PsYAT4M8U"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">কাতার</span>
+</div>
+<!-- Iraq -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Iraq" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2PpCsZSpLHhS-GMLz_uThqOgPkLMBlsSCaTTuHp_AuZdVU88fLLnUhtrxPwKwx5jKptdZdy483ZHbsctSwYFwOlWENPEgUa_z4kpqRVHWNauFKfq_xwCG05wNFHtPLmCGVGMY0jBAcr763ezAjnOAGAS8jPqXk9LAPcT2ySyZ3E6-uYKITsdj24NVCVCy7H9uQ7r33_QP2ktzQcrRdCiKsNbx1XZF_cAigwCCw1CPA7bNMxIpif0fx65Hx2nBkW7NqskITN3fj1M"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ইরাক</span>
+</div>
+<!-- Uzbekistan -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Uzbekistan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0KTjOnBsy9PsFTxbX0kW7w3T2YBrd2OJSuCwDJ-q-Lxjqv_JgCgT8eHHHDNar6RQ3N5YqfGhmXoGx_-oCl0ROYc3RmXBOgk2CIJP5ObbZZju4VhCXesd17o9yOnAC_pPxYndrIXU5lbdkVNmNMqKRWlRjFhLzZpib5P2YmujseonWNK6hIGThtVxeq1wjFqS9Q6NV4Tvx1pVHVlv-giDsO2c3aiIYBw6zjoHcKshoq6_iIRlVhgNdwoDuQVoO3433BOz6Lu2d5ck"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">উজবেকিস্তান</span>
+</div>
+<!-- Ecuador -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Ecuador" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3O-_HiagCDO6T7TlBichQl9v9ajTONi2TFV80p-TXIkGrWhp0KFjidMQ2BETkmOMUiZVipZEMTfl_PXDR91n9BcoWsHPR3eHxriWv-TcoCCzWjNeYjvbxrf1_wV5J0qAyusUk9gXjwSzmNo94JOsgXlbbtMLuqfWDz1yIddytLJ6xiKa_KKPeQvJ0D6nED3w3zPs9QQ706TEDHEQq49tKk6d219yp_4ZCDT78FihzjaFGIaFi6aCrf0KNJZ87QBLD3SOLDVQsMG4"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">ইকুয়েডর</span>
+</div>
+<!-- Paraguay -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Paraguay" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF8xBbjMBtoQ45EYOk5TWlqJkbVJhtbsBJrBWofqY6BVNOXvCKMxaQg2WXIWKshY4Nzxd5sCVot54XgeesOxhKZhi3quFUiZx0zySEOXSR-BxGOE3XOa3cgGyYYETpO-Zep-7rxXKGwZ0H3FRrdJ15QOrP9xI1n_FDYj7TEWkkEglG8QwFVJm_Do_ZSE7GlNFPE8mfjM1CHU0YyYYvv6-pefjBe6rObewtaKUOQW58nCgo2ktSEReDjdG4gc8T-Wi3LZ2ItLYmzj4"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">প্যারাগুয়ে</span>
+</div>
+<!-- Bosnia -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Bosnia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRfJLoYLZDR_s1MR0pOl1V0g4F2rhBDSAf20VQVWl37tUKgpYIeIX_uOeKl-xES0OqOS0DouvVooC8Lr-pVaI_T8hxewjtJjBCY0FzGpBBCz_XjHoIP2lX180CZLeNk8UJpYHfxsOdDqxbSsm59kUVa_y3WOYMiRYWBZsbnJmyDqXppnNKBn8sdz9Mos0r1WTO_Cbvu5sLscBzC-8HhW61eUc1XjafJiB2C7gULXD8ngwJyF6Db3h_0MrNLguDiWCKyNIRqD39yyA"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">বসনিয়া-হার্জেগোভিনা</span>
+</div>
+<!-- Turkey -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Turkey" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfEUW6-T2PN4Wh5kgIQeNSPcWxtC-eKyxNHehAuSkl1uEDekWpGj9HRZMoLu6revHrr7vRUHaMIMLR56nx1DYtS3i6LqbMgNOIglvwYQPDLcydgMS1WknsOR2mGxm9WtoFj0bPjkuF8ZKf_0YbVC_JISO6XcUrTiUWxFi4kuSPIfKeBWsvvAS86Kv2yqa-aTHvR4Zuiw44rgupKXFlB3naUcUuJwTYlZI1ypv7NRvW8GJsRfk0Db3OkkTJCmcKmuSOAf-NdSsdOIs"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">তুরস্ক</span>
+</div>
+<!-- Haiti -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Haiti" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd8ZOq35yujOrFIPfM2MXE4tyIUMUnUxPHg6CNKpq7D81m__2jeDz18Q3jGfJYdFv1zh_F7MmSHxQ4o3xBPHXPZXwAMp-yl55bxydW4JSOsVFx7vEKfd3xyCwuoQ0wf6yM69rek5S4CDnK1h_OIc62QVgjsa5FVHT73k7YdMSMflsiaXDUTLbN4wZhPDPQwnYfA5i8cWDJW9mzbhn_DJapzN0RjJNPIPVzKMkTaFJmEpm7zXDURLvzk2W-vZdhCF5NoVEJ1ZMqWaw"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">হাইতি</span>
+</div>
+<!-- Panama -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Panama" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs26ISiFBnLXfmM8rH3vbN0isCUSQrEdA3Xhm9sTpPYkatxTyb_3sWm21ygO6WFnubn733-PhpfZO1xHzHTGm3VZ5RsNkKi85XfsLtHXGNhkgpUyCI8Tk7LAhqPIWnf-J-rQu9vKqybbSV4mtMkIdtAVR9URY5fflla8wPh_8QqbC2Q88ZALMpjXNREwCro7M2SxiuigfNG7bn0aOCCmLBEvrNzvNletZy-pvUGZkoHzEefpF-u-sSRurIsUoRT1TaJ7A9NeC9v_Y"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">পানামা</span>
+</div>
+<!-- Cape Verde -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Cape Verde" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48f1mtWjGfxgBXhAG4wmAB26PIDOS4OnX7TgelWUahooNNp-IGAQV5kSMwiPymXPoSHU1zGFQg5gmFhwhz7GO48QMCT_QaSkztQO0zkf0IjU2X3mrgMFhQ-bxmqaHqRoChGAA82U0AXhtJKh9OhLHnAR5nH8Fs-V6eUktbltny0eqwh_VCOlFh5zxI_xOol7_qSZ2_soG7uEI1_uhtuIrb87xcu61TfuxIkhqq8K9PlmGVtzL5E-CAw9wMMBvdL1EGxZW3dD6qSk"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">কেপ ভার্দে</span>
+</div>
+<!-- Jordan -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Jordan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ4SGuLFr2QhpmHDn5aLpRrNK4AKVh_PYQT_-2xmbDj2iDCGA0iHNPPMpk9MARZqyUmtOaoYyKT0uJ5-vfiDCyI2Ie5n0mgrKbFi6f9kBHxpYCXdmJ25R3EPhxNuJDkwnGO5DVSMe4Kb-pXy9NeMpPWQBo4mLNi0C5SYFvraEIW9NTJREveU2INtq4E091UOPiMko1Sgw3GNb2wnw59AvgBsys6rnEQWHPr_88qZIs-QaPKlCIenmGDHVAO7FCb1fAefLo2DI-1_s"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">জর্ডান</span>
+</div>
+<!-- Congo DR -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Congo DR" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rGMKJLvGaneDGmckK4fP23wb9N8xLJYnUY5t8VuUPn6RgbuwIKmwex8ioFDzwnHHyJHTLSQqZYc8qra7xEUkzrTPvGXTGHclHn8QRJL3mkOB3_xkcGKM2Xms8bC6HFg4skUbKJDTbArVUTxWNh2C_X9HHVc-sMtR_hyN3XCo415Bv-p3vgy0n75y_qRJ1plcqr9o1xc9BODI8zDmdwhuKPDi4fYbkpIMvDvOzyziEzqHDXR1ek2YDpkur75YqH1DaPSMdXFK-zI"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">কঙ্গো ডিআর</span>
+</div>
+<!-- Algeria -->
+<div class="bg-white rounded-[1.5rem] p-4 flex items-center gap-3 active:scale-95 transition-transform duration-200">
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+<img alt="Algeria" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVurU5teIaZdDaRDrkarf8Oz5aX7KLBB4iZiVN4-hZjokEv4kYkVWGA1rNuAHlG5kZrq5o2oDlQXBqXzMLlvs0f7ab5Id_sq-ubZEw2qEUL_PmyVqZcWhd2XPREELFTc0lwbMQjGkD3DG6x4CKUdAPVyGjtiuz3GmjI9P2WEI8GcelKBKuQ26qGQZ1YRMezvR_iUBUEmmb-ycCdCSR7O-PcMBI-wNmyoSIYgQz8pyq7dVQSsG5OXAIzIJxhWIF8Mm1nIeqgX1pUt0"/>
+</div>
+<span class="text-slate-900 font-bold text-base bengali-typography leading-tight">আলজেরিয়া</span>
+</div>
+</div>
+</main>
+</body></html>
